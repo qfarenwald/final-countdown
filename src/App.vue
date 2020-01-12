@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>Images Beyond Your Wildest Dreams</h1>
     <Images v-bind:images="images" />
   </div>
 </template>
