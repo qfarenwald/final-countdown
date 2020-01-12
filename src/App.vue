@@ -1,29 +1,44 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Find Images Beyond Your Wildest Dreams"/>
-    <input v-model="image" placeholder="ENTER DREAM HERE">
-    <button>SEARCH</button>
+    <h1>Images Beyond Your Wildest Dreams</h1>
+    <Images v-bind:images="images" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Images from './components/Images.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Images
+  },
+  data() {
+    return {
+      images: [
+        {
+          id: 1,
+          image: "image 1"
+        },
+        {
+          id: 2,
+          image: "image 2"
+        }
+      ]
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+  }
 </style>
