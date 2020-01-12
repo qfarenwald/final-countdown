@@ -1,12 +1,15 @@
 <template>
   <div>
-    <h1>Images</h1>
+    <div v-bind:key="image.id" v-for="image in images">
+      <h3>{{ image.image }}</h3>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Images"
+  name: "Images",
+  props: ["images"]
 }
 
 </script>

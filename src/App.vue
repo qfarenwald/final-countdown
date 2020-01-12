@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Images />
+    <Images v-bind:images="images" />
   </div>
 </template>
 
