@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-
+    {{ msg }}
   </div>
 </template>
 
@@ -10,6 +10,20 @@ export default {
   name: 'app',
   components: {
 
+  },
+  data() {
+    return {
+      images: [
+        {
+          id: 1,
+          image: "image 1"
+        },
+        {
+          id: 2,
+          image: "image 2"
+        }
+      ]
+    }
   }
 }
 </script>
