@@ -3,9 +3,6 @@
     <HelloWorld msg="Find Images Beyond Your Wildest Dreams"/>
     <input v-model="image" placeholder="ENTER DREAM HERE">
     <button>SEARCH</button>
-    <ul>
-      <li>insert image components here</li>
-    </ul>
   </div>
 </template>
 
