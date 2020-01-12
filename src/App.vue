@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Find Images Beyond Your Wildest Dreams"/>
+    <input v-model="image" placeholder="ENTER DREAM HERE">
+    <button>SEARCH</button>
   </div>
 </template>
 
