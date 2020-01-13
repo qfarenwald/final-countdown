@@ -1,17 +1,20 @@
 <template>
   <div id="app">
     <h1>Images Beyond Your Wildest Dreams</h1>
+    <Search v-on:new-search="grabSearch"/>
     <Images v-bind:images="images" />
   </div>
 </template>
 
 <script>
 import Images from './components/Images.vue';
+import Search from './components/Search.vue';
 
 export default {
   name: 'app',
   components: {
-    Images
+    Images,
+    Search
   },
   data() {
     return {
@@ -25,6 +28,11 @@ export default {
           image: "image 2"
         }
       ]
+    }
+  },
+  methods: {
+    grabSearch(newSearch) {
+      this.search = newSearch
     }
   }
 }
