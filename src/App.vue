@@ -18,22 +18,18 @@ export default {
   },
   data() {
     return {
-      images: [
-        {
-          id: 1,
-          image: "image 1"
-        },
-        {
-          id: 2,
-          image: "image 2"
-        }
-      ]
+      images: []
     }
   },
   methods: {
     grabSearch(newSearch) {
       this.search = newSearch
     }
+  },
+  created() {
+    fetch('https://api.unsplash.com/search/photos?client_id=ACCESS_KEY&query=office')
+      .then(res => this.images = res.data)
+      .catch(err => console.log(err))
   }
 }
 </script>
