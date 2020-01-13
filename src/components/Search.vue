@@ -16,8 +16,14 @@ export default {
     }
   },
   methods: {
-    grabSearch() {
-      
+    grabSearch(e) {
+      e.preventDefault()
+      const newSearch = {
+        id: Date.now(),
+        search: this.search
+      }
+      this.$emit('new-search', newSearch)
+      this.search = '';
     }
   }
 }

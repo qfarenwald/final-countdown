@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>Images Beyond Your Wildest Dreams</h1>
-    <Search />
+    <Search v-on:new-search="grabSearch"/>
     <Images v-bind:images="images" />
   </div>
 </template>
@@ -28,6 +28,11 @@ export default {
           image: "image 2"
         }
       ]
+    }
+  },
+  methods: {
+    grabSearch(newSearch) {
+      this.search = newSearch
     }
   }
 }
