@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <h1>Images Beyond Your Wildest Dreams</h1>
-    <Search v-on:new-search="grabSearch"/>
+    <header>
+      <h1>imgs</h1>
+      <Search v-on:new-search="grabSearch"/>
+  </header>
     <Images v-bind:images="images" />
   </div>
 </template>
@@ -58,5 +60,15 @@ export default {
   body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.4;
+  }
+
+  header {
+    align-items: center;
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
   }
 </style>
