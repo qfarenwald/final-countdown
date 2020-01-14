@@ -29,7 +29,7 @@ export default {
 <style scoped>
   #inpt {
     border: none;
-    padding: 10px 20px;
+    padding: 10px;
     width: 300px;
   }
 

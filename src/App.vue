@@ -69,8 +69,12 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px;
     position: fixed;
     width: 100%;
+  }
+
+  h1 {
+    margin-left: 10px;
   }
 </style>
