@@ -21,21 +21,24 @@ export default {
   },
   data() {
     return {
-      images: [],
-      search: ''
+      images: null,
+      search: 'dog'
     }
   },
   methods: {
     grabSearch(newSearch) {
       this.search = newSearch
-    }
+    },
+    fetchItems() {
+       fetch('https://api.unsplash.com/search/photos?client_id=e74d7defe8b9af62352bfd945a1d035336288951f2ecc967113f84643977f840&query=dog')
+         .then(res => res.json())
+         .then(data => this.images = data)
+         .catch(error => console.error(error))
+     }
   },
-  created() {
-    console.log('key', process.env.VUE_APP_ACCESS_KEY)
-    fetch(`https://api.unsplash.com/search/photos?client_id=${process.env.VUE_APP_ACCESS_KEY}&query=dog`)
-      .then(res => this.images = res.data)
-      .catch(err => console.log(err))
-  }
+  mounted() {
+    this.fetchItems()
+   }
 }
 </script>
 
