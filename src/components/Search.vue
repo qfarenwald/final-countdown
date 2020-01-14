@@ -39,4 +39,8 @@ export default {
     color: white;
     padding: 10px 20px;
   }
+
+  #btn:hover {
+    background-color: indigo;
+  }
 </style>
