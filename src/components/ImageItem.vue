@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{ image.image }}</p>
+    <img v-bind:src="image.urls.full">
   </div>
 </template>
 
@@ -12,5 +12,7 @@ export default {
 </script>
 
 <style scoped>
-
+  img {
+    width: 100%;
+  }
 </style>
