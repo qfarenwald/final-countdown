@@ -70,5 +70,7 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     padding: 10px 20px;
+    position: fixed;
+    width: 100%;
   }
 </style>
