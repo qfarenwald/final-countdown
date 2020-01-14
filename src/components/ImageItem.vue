@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{ image.image }}</p>
+    <p>{{ image.urls.full }}</p>
   </div>
 </template>
 
