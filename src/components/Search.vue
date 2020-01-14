@@ -1,8 +1,8 @@
 <template>
   <div>
     <form @submit="grabSearch">
-      <input type="text" v-model="search" name="search" placeholder="Image Description" />
-      <input type="submit" value="Submit" class="btn" />
+      <input type="text" v-model="search" name="search" placeholder="Image Description" id="inpt" />
+      <input type="submit" value="SEARCH" id="btn" />
     </form>
   </div>
 </template>
@@ -27,5 +27,20 @@ export default {
 </script>
 
 <style scoped>
+  #inpt {
+    border: none;
+    padding: 10px;
+    width: 300px;
+  }
 
+  #btn {
+    background-color: purple;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+  }
+
+  #btn:hover {
+    background-color: indigo;
+  }
 </style>
