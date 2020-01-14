@@ -18,10 +18,7 @@ export default {
   methods: {
     grabSearch(e) {
       e.preventDefault()
-      const newSearch = {
-        id: Date.now(),
-        search: this.search
-      }
+      const newSearch = this.search
       this.$emit('new-search', newSearch)
       this.search = '';
     }
