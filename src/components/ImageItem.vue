@@ -1,6 +1,7 @@
 <template>
   <div>
-    <p>{{ image.urls.full }}</p>
+    <!-- <p>{{ image.urls.full }}</p> -->
+    <img v-bind:src="image.urls.full">
   </div>
 </template>
 
