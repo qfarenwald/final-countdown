@@ -30,7 +30,8 @@ export default {
       this.search = newSearch
     },
     fetchItems() {
-       fetch('https://api.unsplash.com/search/photos?client_id=e74d7defe8b9af62352bfd945a1d035336288951f2ecc967113f84643977f840&query=dog')
+      const url = `https://api.unsplash.com/search/photos?client_id=e74d7defe8b9af62352bfd945a1d035336288951f2ecc967113f84643977f840&query=${this.search}`;
+       fetch(url)
          .then(res => res.json())
          .then(data => this.images = data)
          .catch(error => console.error(error))
