@@ -19,5 +19,9 @@ export default {
 </script>
 
 <style scoped>
-
+  div {
+    align-items: center;
+    background-color: black;
+    display: flex;
+  }
 </style>
