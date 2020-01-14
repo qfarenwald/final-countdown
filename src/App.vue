@@ -28,9 +28,14 @@ export default {
   methods: {
     grabSearch(newSearch) {
       this.search = newSearch
+      const url = `https://api.unsplash.com/search/photos?client_id=e74d7defe8b9af62352bfd945a1d035336288951f2ecc967113f84643977f840&query=${newSearch}`;
+       fetch(url)
+         .then(res => res.json())
+         .then(data => this.images = data.results)
+         .catch(error => console.error(error))
     },
-    fetchItems() {
-      const url = `https://api.unsplash.com/search/photos?client_id=e74d7defe8b9af62352bfd945a1d035336288951f2ecc967113f84643977f840&query=${this.search}`;
+    fetchItems(search) {
+      const url = `https://api.unsplash.com/search/photos?client_id=e74d7defe8b9af62352bfd945a1d035336288951f2ecc967113f84643977f840&query=${search}`;
        fetch(url)
          .then(res => res.json())
          .then(data => this.images = data.results)
@@ -38,7 +43,7 @@ export default {
      }
   },
   mounted() {
-    this.fetchItems()
+    this.fetchItems(this.search)
    }
 }
 </script>
