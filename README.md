@@ -1,5 +1,5 @@
 # imgs
--Imgs was created as a way to explore a new framework, Vue. Using the Unsplash API, a user can search for the top 10 photos that meet their search requirements.
+- Imgs was created as a way to explore a new framework, Vue. Using the Unsplash API, a user can search for the top 10 photos that meet their search requirements.
 
 ### Focuses
 - Professional workflow (git branches, commits, waffle board).
